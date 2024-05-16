@@ -16,8 +16,10 @@ import java.util.ArrayList;
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewHolderPage> {
 
     private ArrayList<ViewPagerData> listData;
+    private Context context;
 
-    public ViewPagerAdapter(ArrayList<ViewPagerData> listData) {
+    public ViewPagerAdapter(Context context,ArrayList<ViewPagerData> listData) {
+        this.context = context;
         this.listData = listData;
     }
 
@@ -27,7 +29,6 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewHolderPage> {
     @NonNull
     @Override
     public ViewHolderPage onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.item_viewpager, parent, false);
         return new ViewHolderPage(view);
     }
