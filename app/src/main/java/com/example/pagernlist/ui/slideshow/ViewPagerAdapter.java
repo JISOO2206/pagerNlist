@@ -29,7 +29,7 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewHolderPage> {
     @NonNull
     @Override
     public ViewHolderPage onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_viewpager, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.listview, parent, false);
         return new ViewHolderPage(view);
     }
 
@@ -38,7 +38,7 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewHolderPage> {
     public void onBindViewHolder(@NonNull ViewHolderPage holder, int position) {
         if(holder instanceof ViewHolderPage){
             ViewHolderPage viewHolder = (ViewHolderPage) holder;
-            viewHolder.onDataBind(listData.get(position));
+//            viewHolder.onDataBind(listData.get(position));
         }
     }
 
